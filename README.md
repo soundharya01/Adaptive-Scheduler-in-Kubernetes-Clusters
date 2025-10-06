@@ -19,7 +19,7 @@ Instead of keeping all worker nodes running continuously, the scheduler:
 ---
 
 ## 🧱 Architecture Overview
-      ![Architecture Diagram](./images/architecture.png)
+      ![Architecture Diagram](./architecture.png)
   
 
 ---
