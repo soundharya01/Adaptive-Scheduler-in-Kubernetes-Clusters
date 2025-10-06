@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: stress-sim
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stress-sim
+  serviceName: "stress-sim"
+  template:
+    metadata:
+      labels:
+        app: stress-sim
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: usage
+                    operator: In
+                    values:
+                      - active
+      containers:
+        - name: stress-sim
+          image: soundharyamoorthi/stress-sim:30s
+          env:
+            - name: POD_INDEX
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "0Mi"
+            limits:
+              cpu: "420m"
+              memory: "0Mi"
