@@ -14,13 +14,7 @@ Instead of keeping all worker nodes running continuously, the scheduler:
 - ✅ **Dynamic Node Power Management:** Automatically powers nodes on/off based on cluster workload.  
 - 📊 **Prometheus Integration:** Collects live CPU and resource utilization metrics.  
 - ⚖️ **Adaptive Thresholding:** Continuously adjusts scheduling thresholds to match workload changes.  
-- 🧠 **Smart Scheduling:** Custom Python logic extending Kubernetes’ default scheduler.   
-
----
-
-## 🧱 Architecture Overview
-      ![Architecture Diagram](./architecture.png)
-  
+- 🧠 **Smart Scheduling:** Custom Python logic extending Kubernetes’ default scheduler.  
 
 ---
 
