@@ -4,7 +4,7 @@ import tempfile
 import shutil
 import os
 
-PROMETHEUS_URL = "http://161.200.90.106:32090/api/v1/query"
+PROMETHEUS_URL = "http://IP:32090/api/v1/query"
 
 def safe_write_json(filename, data):
     try:
