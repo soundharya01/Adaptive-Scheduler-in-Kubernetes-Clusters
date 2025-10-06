@@ -6,11 +6,11 @@ import subprocess
 
 # Constants
 IPMI_WORKER_IPS = {
-    'kworker-sys-e300-8d': '192.168.100.12',
-    'kworker2-sys-e300-8d': '192.168.100.11'
+    'kworker-sys-e300-8d': 'IP',
+    'kworker2-sys-e300-8d': 'IP'
 }
-IPMI_USER = "ADMIN"
-IPMI_PASSWORD = "admin"
+IPMI_USER = "User_Name"
+IPMI_PASSWORD = "Password"
 EWMA_FILE = "ewma_metrics.json"
 CSV_LOG_FILE = "node_threshold_metrics.csv"
 EWMA_LOG_FILE = "ewma_values.csv"
